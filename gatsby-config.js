@@ -20,6 +20,11 @@ module.exports = {
         scope: '/',
         cache_busting_mode: 'none',
         icons: [
+          {
+            src: `/trondheim-rose.png`,
+            sizes: `200x200`,
+            type: `image/png`,
+          },
         ],
         localize: [
           {
@@ -35,7 +40,7 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         cacheId: `gatsby-plugin-offline`,
-        precachePages: ['/**/'],
+        precachePages: ['/*'],
         workboxConfig: {
           maximumFileSizeToCacheInBytes: 100000000
         },
