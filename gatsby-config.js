@@ -21,17 +21,14 @@ module.exports = {
         cache_busting_mode: 'none',
         icons: [
           {
-            src: `/trondheim-rose.png`,
-            sizes: `200x200`,
+            src: `/logo-192.png`,
+            sizes: `192x192`,
             type: `image/png`,
           },
-        ],
-        localize: [
           {
-            start_url: `/en/`,
-            lang: `en-US`,
-            name: `The official website for Trondheim`,
-            short_name: `Trondheim.no`,
+            src: `/logo-512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
           },
         ],
       },
