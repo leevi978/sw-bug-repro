@@ -1,46 +1,29 @@
 
-let deferredPrompt;
-
-self.addEventListener('beforeinstallprompt', (e) => {
-  console.log("Installable")
-});
-
-let precacheResources = []
-var staticCacheName = 'offline-pwa'
-
-self.onhashchange = () => {
-  console.log("Hash change")
-}
-
-self.oninstall = () => {
-  console.log("on install")
-  console.log(self)
-}
-
-self.onmessage = (e) => {
-  console.log(`on message: ${e}`)
-}
-
-self.onsync = () => {
-  console.log("on sync")
-}
-
-self.onactivate = () => {
-  console.log("on activate")
-}
-
-self.addEventListener('update', () => {
-  console.log('update')
+self.addEventListener('install', (event) => {
+  console.log("Installing service worker...")
 })
 
-self.addEventListener('appinstalled', event => {
-  console.log('Attempting to install service worker and cache static assets');
-  /*
-  event.waitUntil(
-    caches.open(staticCacheName)
-      .then(cache => {
-        return cache.addAll(precacheResources);
-      })
-  );
-  */
-});
+self.addEventListener('activate', (event) => {
+  console.log('Service worker active.')
+})
+
+self.addEventListener('message', async (event) => {
+  if (event.data === 'onappinstalled') {
+    console.log(`App was installed. Precaching pages...`)
+    const precacheFiles = self.__WB_MANIFEST
+
+    
+    const cache = await caches.open(workbox.core.cacheNames.runtime)
+
+    var i = 0
+    while (i < precacheFiles.length) {
+      const file = precacheFiles[i]
+      await workbox.routing.registerRoute(`/${file.url}`, new workbox.strategies.CacheFirst(), 'GET')
+      await cache.add(`/${file.url}`)
+      i++
+    }
+
+    console.log("Caching of pages successful.")
+  }
+})
+

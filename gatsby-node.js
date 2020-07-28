@@ -8,8 +8,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   var links = []
 
-  for (var level = 0; level < 5; level++) {
-    for (var pageNumber = 0; pageNumber < 3; pageNumber++) {
+  for (var level = 0; level < 20; level++) {
+    const index = Math.floor(Math.random() * 9)
+    for (var pageNumber = 0; pageNumber < 5; pageNumber++) {
       const pageName = `page-${pageNumber}`
       var pagePath = `/${pageName}`
       for (var i = level; i >= 0; i--) {
@@ -25,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: template,
       context: {
         title: pagePath.split('/').pop(),
-        links: links
+        links: links.slice(0, 50)
       }
     })
   })
@@ -34,88 +35,50 @@ exports.createPages = async ({ graphql, actions }) => {
     path: '/',
     component: home,
     context: {
-      links: links
+      links: links.slice(0, 50)
     }
   })
 }
 
-exports.onPostBuild = (args, _ref3) => {
+exports.onPostBuild = async (args, _ref3) => {
 
-  const glob = require('glob')
   const fs = require('fs')
-  var _ = require("lodash");
-  var path = require("path");
-  var getResourcesFromHTML = require("./get-resources-from-html");
+  const workboxBuild = require('workbox-build');
 
-  const globs = ['/**/']
-  const rootDir = 'public'
-  const base = process.cwd() + "/" + rootDir
+  // NOTE: This should be run *AFTER* all your assets are built
+  // This will return a Promise
+  console.log("Building sw...")
+  await (workboxBuild.injectManifest({
+    swSrc: './static/sw-temp.js',
+    swDest: './public/sw-temp.js',
+    globDirectory: 'public',
+    globPatterns: [
+      '**/*',
+    ]
+  }).then(({ count, size, warnings }) => {
+    console.log("Build sw complete.")
+    // Optionally, log any warnings and details.
+    warnings.forEach(console.warn);
+    console.log(`${count} files will be precached, totaling ${size} bytes.`);
+  }));
 
-  var pathPrefix = args.pathPrefix
+  const { PWAManifest } = await require('./public/sw-temp.js')
+  const sw = await fs.readFileSync('public/sw.js', 'utf8')
 
-  function flat(arr) {
-    var _ref4;
-
-    return Array.prototype.flat ? arr.flat() : (_ref4 = []).concat.apply(_ref4, arr);
-  }
-
-  var s;
-
-  var readStats = function readStats() {
-    if (s) {
-      return s;
-    } else {
-      s = JSON.parse(fs.readFileSync(process.cwd() + "/public/webpack.stats.json", "utf-8"));
-      return s;
+  var precacheFiles = []
+  var discardedFiles = []
+  PWAManifest.map(file => {
+    if (!sw.includes(`"url": "${file.url}"`)) {
+      precacheFiles.push(file)
     }
-  };
+    else {
+      discardedFiles.push(file)
+    }
+  })
 
-  function getAssetsForChunks(chunks) {
-    var files = _.flatten(chunks.map(function (chunk) {
-      return readStats().assetsByChunkName[chunk];
-    }));
+  await fs.writeFileSync('public/sw.js', sw.replace('self.__WB_MANIFEST',
+    `[${precacheFiles.map(file => `\n${JSON.stringify(file)}`)}]`))
 
-    return _.compact(files);
-  }
+  console.log(`Discarded files: \n${discardedFiles.map(file => `\n${JSON.stringify(file)}`)}`)
 
-  var files = getAssetsForChunks([]);
-
-  function getPrecachePages() {
-
-    var precachePages = [];
-
-    globs.forEach(function (page) {
-      var matches = glob.sync(base + page);
-      matches.forEach(function (path) {
-        var isDirectory = fs.lstatSync(path).isDirectory();
-        var precachePath;
-
-        if (isDirectory && fs.existsSync(path + "index.html")) {
-          precachePath = path + "index.html";
-        } else if (path.endsWith(".html")) {
-          precachePath = path;
-        } else {
-          return;
-        }
-
-        if (precachePages.indexOf(precachePath) === -1) {
-          precachePages.push(precachePath);
-        }
-      });
-    });
-    return precachePages
-  }
-  const precachePages = getPrecachePages()
-
-  var criticalFilePaths = _.uniq(flat(precachePages.map(function (page) {
-    return getResourcesFromHTML(page, pathPrefix);
-  })));
-  console.log(base)
-
-  var alteredBase = base.split('\\').join('/')
-
-  const swAppend = `\n\nprecacheResources = [${precachePages.concat(criticalFilePaths)
-    .map(file => `"${file.split('\\').join('/').replace(alteredBase, '')}"`)}]`
-
-  fs.appendFileSync("public/sw.js", swAppend);
 }

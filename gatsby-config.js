@@ -33,6 +33,7 @@ module.exports = {
         ],
       },
     },
+
     {
       resolve: `gatsby-plugin-offline`,
       options: {
@@ -44,5 +45,6 @@ module.exports = {
         appendScript: require.resolve(`./src/sw.js`),
       },
     },
+
   ],
 }
