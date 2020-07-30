@@ -1,0 +1,543 @@
+{
+  "Navbar": [
+    {
+      "navbarText": "TRONDHEIM.NO",
+      "_fl_meta_": {
+        "schemaRef": {
+          "sortable": true,
+          "id": "navbar",
+          "fields": [
+            {
+              "key": "navbarText",
+              "id": 1593423986596,
+              "conditions": [],
+              "type": "text",
+              "description": "Text shown in the top right of the navigation bar",
+              "show": true,
+              "readOnly": false,
+              "title": "Navbar Text",
+              "constraints": [],
+              "defaultValue": "TRONDHEIM.NO",
+              "hidden": false,
+              "gridColumns": {
+                "xs": 12,
+                "lg": 8,
+                "md": 8,
+                "sm": 12
+              }
+            },
+            {
+              "mediaTypes": [
+                "images"
+              ],
+              "gridColumns": {
+                "lg": 4,
+                "md": 4,
+                "sm": 12,
+                "xs": 12
+              },
+              "limit": 1,
+              "key": "logo",
+              "id": 1593424019116,
+              "conditions": [],
+              "type": "media",
+              "readOnly": false,
+              "description": "Logo image shown in the top right of the navigation bar",
+              "show": false,
+              "title": "Logo",
+              "constraints": [
+                {
+                  "rule": "presence",
+                  "ruleValue": {
+                    "allowEmpty": false,
+                    "message": "^Field is required"
+                  },
+                  "uniqueKey": "QDIFFvuCN"
+                }
+              ],
+              "hidden": false
+            },
+            {
+              "key": "extraMenuOptions",
+              "id": 1593431096160,
+              "conditions": [],
+              "type": "repeater",
+              "readOnly": false,
+              "description": "Additional navigation options shown in the drop menu",
+              "show": false,
+              "title": "Extra Menu Options",
+              "constraints": [],
+              "layout": "table",
+              "hidden": false,
+              "gridColumns": {
+                "sm": 12,
+                "xs": 12,
+                "lg": 12,
+                "md": 12
+              },
+              "options": [
+                {
+                  "defaultValue": "",
+                  "hidden": false,
+                  "gridColumns": {
+                    "lg": 12,
+                    "md": 12,
+                    "sm": 12,
+                    "xs": 12
+                  },
+                  "key": "title",
+                  "id": 1593431128862,
+                  "conditions": [],
+                  "type": "text",
+                  "description": "",
+                  "show": false,
+                  "readOnly": false,
+                  "title": "Title",
+                  "constraints": [
+                    {
+                      "rule": "presence",
+                      "ruleValue": {
+                        "message": "^Field is required",
+                        "allowEmpty": false
+                      },
+                      "uniqueKey": "JIiPHFG3J"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "description": "Which URL should this option redirect to?",
+                  "show": false,
+                  "readOnly": false,
+                  "title": "Redirect URL",
+                  "constraints": [
+                    {
+                      "uniqueKey": "xKvLdDyja",
+                      "rule": "presence",
+                      "ruleValue": {
+                        "allowEmpty": false
+                      }
+                    },
+                    {
+                      "rule": "url",
+                      "ruleValue": {
+                        "message": "^Field is not a valid url",
+                        "allowLocal": false,
+                        "schemes": [
+                          "http",
+                          "https"
+                        ]
+                      },
+                      "uniqueKey": "LnqVEv3jT"
+                    }
+                  ],
+                  "defaultValue": "",
+                  "hidden": false,
+                  "gridColumns": {
+                    "xs": 12,
+                    "lg": 12,
+                    "md": 12,
+                    "sm": 12
+                  },
+                  "key": "redirectUrl",
+                  "id": 1593431142645,
+                  "conditions": []
+                }
+              ]
+            }
+          ],
+          "_fl_meta_": {
+            "fl_id": "navbar",
+            "docId": "rwUmPQGIukFefDMKm54x",
+            "lastModifiedDate": "2020-06-29T11:46:20.455Z",
+            "lastModifiedBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+            "env": "production",
+            "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+            "createdDate": "2020-06-29T09:49:26.748Z"
+          },
+          "icon": "",
+          "group": "Navbar",
+          "type": "single",
+          "title": "Navbar",
+          "description": "Text, logo, and extra menu options to be rendered on the page's navigation bar",
+          "enabled": true
+        },
+        "env": "production",
+        "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+        "createdDate": "2020-06-30T10:45:35.516Z",
+        "schema": "navbar",
+        "fl_id": "xlOsKojjIdbg3pnjcuQe",
+        "locale": "en-US",
+        "schemaType": "single",
+        "docId": "xlOsKojjIdbg3pnjcuQe"
+      },
+      "order": 0,
+      "logo": [
+        {
+          "folderId": {
+            "order": 4,
+            "name": "Frontpage Images",
+            "id": "GHRkSTuMUzB9zUAaMeBZ",
+            "parentId": {
+              "order": 0,
+              "name": "Root",
+              "id": "root",
+              "parentId": 0,
+              "_fl_meta_": {
+                "lastModifiedBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+                "lastModifiedDate": "2020-06-29T13:37:01.004Z",
+                "docId": "root",
+                "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+                "createdDate": "2020-06-29T13:36:54.676Z"
+              }
+            },
+            "_fl_meta_": {
+              "docId": "GHRkSTuMUzB9zUAaMeBZ",
+              "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+              "createdDate": "2020-06-29T12:57:50.407Z",
+              "lastModifiedBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+              "lastModifiedDate": "2020-06-29T12:57:56.804Z"
+            }
+          },
+          "contentType": "image/png",
+          "_fl_meta_": {
+            "createdDate": "2020-06-29T13:01:14.563Z",
+            "docId": "0C0EAhR0eCGMq2rXGz8M",
+            "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2"
+          },
+          "type": "images",
+          "sizes": [
+            {
+              "height": "9999",
+              "width": "375",
+              "path": "375_9999_100",
+              "quality": "1"
+            },
+            {
+              "path": "667_9999_100",
+              "quality": "1",
+              "height": "9999",
+              "width": "667"
+            },
+            {
+              "height": "9999",
+              "width": "900",
+              "path": "900_9999_100",
+              "quality": "1"
+            },
+            {
+              "path": "1080_9999_100",
+              "quality": "1",
+              "height": "9999",
+              "width": "1080"
+            },
+            {
+              "path": "1440_9999_100",
+              "quality": "1",
+              "height": "9999",
+              "width": "1440"
+            },
+            {
+              "path": "1920_9999_100",
+              "quality": "1",
+              "height": "9999",
+              "width": "1920"
+            }
+          ],
+          "file": "trondheim-rose.png",
+          "url": "https://storage.googleapis.com/byportal-218506.appspot.com/flamelink/media/trondheim-rose.png?GoogleAccessId=firebase-adminsdk-milcl%40byportal-218506.iam.gserviceaccount.com&Expires=16725222000&Signature=ispev177NZs6miRfdwdkIvU%2FXjny72%2FAiH6%2FNphbhJjL3852TJqV7Hg2CrF2of%2FaGKhbA6Oqkw9GoF2Dceu0wf2DeEoPLU4Gz%2BE2Q02Cj%2FNI8TiRH6B7VB29m7HEfNX%2BPvZar7sU2G%2BQManZWFa0nW1yeJPIJ1WSkbTplFphEEkvUTJ4JTvH3T9pSFeKB7t%2BY1%2Fj3w8hCEBvKxkja9kAAZQVS%2BaGFbOKqZQ%2BKOq3YPuiFp1NhBbB0hoF0qqK3HWj2oWW6j8SfDoLGA%2BNroLA11npf%2FUcLflmW6p4HQ4VC6dyMMuvzS0L8SU7Pk%2FDUgeOVD%2Bzr4VY0PKJIC6jLfmc1Q%3D%3D",
+          "flamelink_id": "0C0EAhR0eCGMq2rXGz8M",
+          "localFile___NODE": "c41a0c68-ee44-5e05-b3ca-e703057ba1a5"
+        }
+      ],
+      "parentId": "0",
+      "flamelink_id": "xlOsKojjIdbg3pnjcuQe",
+      "extraMenuOptions___NODE": [],
+      "flamelink_locale": "en-US",
+      "id": "feb05cd7-fc2f-534d-8367-1ffa1f73f170",
+      "parent": null,
+      "children": [
+        "1597a2c2-1157-5c70-b9e7-602808f39949"
+      ],
+      "internal": {
+        "type": "FlamelinkNavbarContent",
+        "content": "{\"navbarText\":\"TRONDHEIM.NO\",\"_fl_meta_\":{\"schemaRef\":{\"sortable\":true,\"id\":\"navbar\",\"fields\":[{\"key\":\"navbarText\",\"id\":1593423986596,\"conditions\":[],\"type\":\"text\",\"description\":\"Text shown in the top right of the navigation bar\",\"show\":true,\"readOnly\":false,\"title\":\"Navbar Text\",\"constraints\":[],\"defaultValue\":\"TRONDHEIM.NO\",\"hidden\":false,\"gridColumns\":{\"xs\":12,\"lg\":8,\"md\":8,\"sm\":12}},{\"mediaTypes\":[\"images\"],\"gridColumns\":{\"lg\":4,\"md\":4,\"sm\":12,\"xs\":12},\"limit\":1,\"key\":\"logo\",\"id\":1593424019116,\"conditions\":[],\"type\":\"media\",\"readOnly\":false,\"description\":\"Logo image shown in the top right of the navigation bar\",\"show\":false,\"title\":\"Logo\",\"constraints\":[{\"rule\":\"presence\",\"ruleValue\":{\"allowEmpty\":false,\"message\":\"^Field is required\"},\"uniqueKey\":\"QDIFFvuCN\"}],\"hidden\":false},{\"key\":\"extraMenuOptions\",\"id\":1593431096160,\"conditions\":[],\"type\":\"repeater\",\"readOnly\":false,\"description\":\"Additional navigation options shown in the drop menu\",\"show\":false,\"title\":\"Extra Menu Options\",\"constraints\":[],\"layout\":\"table\",\"hidden\":false,\"gridColumns\":{\"sm\":12,\"xs\":12,\"lg\":12,\"md\":12},\"options\":[{\"defaultValue\":\"\",\"hidden\":false,\"gridColumns\":{\"lg\":12,\"md\":12,\"sm\":12,\"xs\":12},\"key\":\"title\",\"id\":1593431128862,\"conditions\":[],\"type\":\"text\",\"description\":\"\",\"show\":false,\"readOnly\":false,\"title\":\"Title\",\"constraints\":[{\"rule\":\"presence\",\"ruleValue\":{\"message\":\"^Field is required\",\"allowEmpty\":false},\"uniqueKey\":\"JIiPHFG3J\"}]},{\"type\":\"text\",\"description\":\"Which URL should this option redirect to?\",\"show\":false,\"readOnly\":false,\"title\":\"Redirect URL\",\"constraints\":[{\"uniqueKey\":\"xKvLdDyja\",\"rule\":\"presence\",\"ruleValue\":{\"allowEmpty\":false}},{\"rule\":\"url\",\"ruleValue\":{\"message\":\"^Field is not a valid url\",\"allowLocal\":false,\"schemes\":[\"http\",\"https\"]},\"uniqueKey\":\"LnqVEv3jT\"}],\"defaultValue\":\"\",\"hidden\":false,\"gridColumns\":{\"xs\":12,\"lg\":12,\"md\":12,\"sm\":12},\"key\":\"redirectUrl\",\"id\":1593431142645,\"conditions\":[]}]}],\"_fl_meta_\":{\"fl_id\":\"navbar\",\"docId\":\"rwUmPQGIukFefDMKm54x\",\"lastModifiedDate\":\"2020-06-29T11:46:20.455Z\",\"lastModifiedBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"env\":\"production\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"createdDate\":\"2020-06-29T09:49:26.748Z\"},\"icon\":\"\",\"group\":\"Navbar\",\"type\":\"single\",\"title\":\"Navbar\",\"description\":\"Text, logo, and extra menu options to be rendered on the page's navigation bar\",\"enabled\":true},\"env\":\"production\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"createdDate\":\"2020-06-30T10:45:35.516Z\",\"schema\":\"navbar\",\"fl_id\":\"xlOsKojjIdbg3pnjcuQe\",\"locale\":\"en-US\",\"schemaType\":\"single\",\"docId\":\"xlOsKojjIdbg3pnjcuQe\"},\"order\":0,\"logo\":[{\"folderId\":{\"order\":4,\"name\":\"Frontpage Images\",\"id\":\"GHRkSTuMUzB9zUAaMeBZ\",\"parentId\":{\"order\":0,\"name\":\"Root\",\"id\":\"root\",\"parentId\":0,\"_fl_meta_\":{\"lastModifiedBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"lastModifiedDate\":\"2020-06-29T13:37:01.004Z\",\"docId\":\"root\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"createdDate\":\"2020-06-29T13:36:54.676Z\"}},\"_fl_meta_\":{\"docId\":\"GHRkSTuMUzB9zUAaMeBZ\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"createdDate\":\"2020-06-29T12:57:50.407Z\",\"lastModifiedBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"lastModifiedDate\":\"2020-06-29T12:57:56.804Z\"}},\"contentType\":\"image/png\",\"_fl_meta_\":{\"createdDate\":\"2020-06-29T13:01:14.563Z\",\"docId\":\"0C0EAhR0eCGMq2rXGz8M\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\"},\"type\":\"images\",\"sizes\":[{\"height\":\"9999\",\"width\":\"375\",\"path\":\"375_9999_100\",\"quality\":\"1\"},{\"path\":\"667_9999_100\",\"quality\":\"1\",\"height\":\"9999\",\"width\":\"667\"},{\"height\":\"9999\",\"width\":\"900\",\"path\":\"900_9999_100\",\"quality\":\"1\"},{\"path\":\"1080_9999_100\",\"quality\":\"1\",\"height\":\"9999\",\"width\":\"1080\"},{\"path\":\"1440_9999_100\",\"quality\":\"1\",\"height\":\"9999\",\"width\":\"1440\"},{\"path\":\"1920_9999_100\",\"quality\":\"1\",\"height\":\"9999\",\"width\":\"1920\"}],\"file\":\"trondheim-rose.png\",\"url\":\"https://storage.googleapis.com/byportal-218506.appspot.com/flamelink/media/trondheim-rose.png?GoogleAccessId=firebase-adminsdk-milcl%40byportal-218506.iam.gserviceaccount.com&Expires=16725222000&Signature=ispev177NZs6miRfdwdkIvU%2FXjny72%2FAiH6%2FNphbhJjL3852TJqV7Hg2CrF2of%2FaGKhbA6Oqkw9GoF2Dceu0wf2DeEoPLU4Gz%2BE2Q02Cj%2FNI8TiRH6B7VB29m7HEfNX%2BPvZar7sU2G%2BQManZWFa0nW1yeJPIJ1WSkbTplFphEEkvUTJ4JTvH3T9pSFeKB7t%2BY1%2Fj3w8hCEBvKxkja9kAAZQVS%2BaGFbOKqZQ%2BKOq3YPuiFp1NhBbB0hoF0qqK3HWj2oWW6j8SfDoLGA%2BNroLA11npf%2FUcLflmW6p4HQ4VC6dyMMuvzS0L8SU7Pk%2FDUgeOVD%2Bzr4VY0PKJIC6jLfmc1Q%3D%3D\",\"flamelink_id\":\"0C0EAhR0eCGMq2rXGz8M\"}],\"parentId\":\"0\",\"flamelink_id\":\"xlOsKojjIdbg3pnjcuQe\",\"extraMenuOptions___NODE\":[]}",
+        "contentDigest": "a0d0706416599a7006a69658fda82eb7",
+        "counter": 168,
+        "owner": "gatsby-source-flamelink"
+      }
+    },
+    {
+      "_fl_meta_": {
+        "schemaType": "single",
+        "docId": "v9NPfevbknDrwgh15MJF",
+        "lastModifiedDate": "2020-07-29T14:22:40.201Z",
+        "lastModifiedBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+        "schemaRef": {
+          "_fl_meta_": {
+            "lastModifiedDate": "2020-06-29T11:46:20.455Z",
+            "lastModifiedBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+            "env": "production",
+            "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+            "createdDate": "2020-06-29T09:49:26.748Z",
+            "fl_id": "navbar",
+            "docId": "rwUmPQGIukFefDMKm54x"
+          },
+          "icon": "",
+          "group": "Navbar",
+          "type": "single",
+          "title": "Navbar",
+          "description": "Text, logo, and extra menu options to be rendered on the page's navigation bar",
+          "enabled": true,
+          "sortable": true,
+          "id": "navbar",
+          "fields": [
+            {
+              "conditions": [],
+              "type": "text",
+              "description": "Text shown in the top right of the navigation bar",
+              "show": true,
+              "readOnly": false,
+              "title": "Navbar Text",
+              "constraints": [],
+              "defaultValue": "TRONDHEIM.NO",
+              "hidden": false,
+              "gridColumns": {
+                "sm": 12,
+                "xs": 12,
+                "lg": 8,
+                "md": 8
+              },
+              "key": "navbarText",
+              "id": 1593423986596
+            },
+            {
+              "hidden": false,
+              "mediaTypes": [
+                "images"
+              ],
+              "gridColumns": {
+                "sm": 12,
+                "xs": 12,
+                "lg": 4,
+                "md": 4
+              },
+              "limit": 1,
+              "key": "logo",
+              "id": 1593424019116,
+              "conditions": [],
+              "type": "media",
+              "readOnly": false,
+              "description": "Logo image shown in the top right of the navigation bar",
+              "show": false,
+              "title": "Logo",
+              "constraints": [
+                {
+                  "rule": "presence",
+                  "ruleValue": {
+                    "message": "^Field is required",
+                    "allowEmpty": false
+                  },
+                  "uniqueKey": "QDIFFvuCN"
+                }
+              ]
+            },
+            {
+              "type": "repeater",
+              "readOnly": false,
+              "description": "Additional navigation options shown in the drop menu",
+              "show": false,
+              "title": "Extra Menu Options",
+              "constraints": [],
+              "layout": "table",
+              "hidden": false,
+              "gridColumns": {
+                "lg": 12,
+                "md": 12,
+                "sm": 12,
+                "xs": 12
+              },
+              "options": [
+                {
+                  "hidden": false,
+                  "gridColumns": {
+                    "lg": 12,
+                    "md": 12,
+                    "sm": 12,
+                    "xs": 12
+                  },
+                  "key": "title",
+                  "id": 1593431128862,
+                  "conditions": [],
+                  "type": "text",
+                  "description": "",
+                  "show": false,
+                  "readOnly": false,
+                  "title": "Title",
+                  "constraints": [
+                    {
+                      "uniqueKey": "JIiPHFG3J",
+                      "rule": "presence",
+                      "ruleValue": {
+                        "allowEmpty": false,
+                        "message": "^Field is required"
+                      }
+                    }
+                  ],
+                  "defaultValue": ""
+                },
+                {
+                  "defaultValue": "",
+                  "hidden": false,
+                  "gridColumns": {
+                    "xs": 12,
+                    "lg": 12,
+                    "md": 12,
+                    "sm": 12
+                  },
+                  "key": "redirectUrl",
+                  "id": 1593431142645,
+                  "conditions": [],
+                  "type": "text",
+                  "description": "Which URL should this option redirect to?",
+                  "show": false,
+                  "readOnly": false,
+                  "title": "Redirect URL",
+                  "constraints": [
+                    {
+                      "ruleValue": {
+                        "allowEmpty": false
+                      },
+                      "uniqueKey": "xKvLdDyja",
+                      "rule": "presence"
+                    },
+                    {
+                      "ruleValue": {
+                        "allowLocal": false,
+                        "schemes": [
+                          "http",
+                          "https"
+                        ],
+                        "message": "^Field is not a valid url"
+                      },
+                      "uniqueKey": "LnqVEv3jT",
+                      "rule": "url"
+                    }
+                  ]
+                }
+              ],
+              "key": "extraMenuOptions",
+              "id": 1593431096160,
+              "conditions": []
+            }
+          ]
+        },
+        "env": "production",
+        "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+        "createdDate": "2020-06-30T10:45:24.184Z",
+        "schema": "navbar",
+        "fl_id": "v9NPfevbknDrwgh15MJF",
+        "locale": "no"
+      },
+      "order": 0,
+      "logo": [
+        {
+          "folderId": {
+            "order": 4,
+            "name": "Frontpage Images",
+            "id": "GHRkSTuMUzB9zUAaMeBZ",
+            "parentId": {
+              "parentId": 0,
+              "_fl_meta_": {
+                "docId": "root",
+                "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+                "createdDate": "2020-06-29T13:36:54.676Z",
+                "lastModifiedBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+                "lastModifiedDate": "2020-06-29T13:37:01.004Z"
+              },
+              "order": 0,
+              "name": "Root",
+              "id": "root"
+            },
+            "_fl_meta_": {
+              "docId": "GHRkSTuMUzB9zUAaMeBZ",
+              "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+              "createdDate": "2020-06-29T12:57:50.407Z",
+              "lastModifiedBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2",
+              "lastModifiedDate": "2020-06-29T12:57:56.804Z"
+            }
+          },
+          "contentType": "image/png",
+          "_fl_meta_": {
+            "createdDate": "2020-06-29T13:01:14.563Z",
+            "docId": "0C0EAhR0eCGMq2rXGz8M",
+            "createdBy": "jnZrivWWxXgTt4xQQIFWfTHb2BB2"
+          },
+          "type": "images",
+          "sizes": [
+            {
+              "path": "375_9999_100",
+              "quality": "1",
+              "height": "9999",
+              "width": "375"
+            },
+            {
+              "height": "9999",
+              "width": "667",
+              "path": "667_9999_100",
+              "quality": "1"
+            },
+            {
+              "path": "900_9999_100",
+              "quality": "1",
+              "height": "9999",
+              "width": "900"
+            },
+            {
+              "path": "1080_9999_100",
+              "quality": "1",
+              "height": "9999",
+              "width": "1080"
+            },
+            {
+              "height": "9999",
+              "width": "1440",
+              "path": "1440_9999_100",
+              "quality": "1"
+            },
+            {
+              "path": "1920_9999_100",
+              "quality": "1",
+              "height": "9999",
+              "width": "1920"
+            }
+          ],
+          "file": "trondheim-rose.png",
+          "url": "https://storage.googleapis.com/byportal-218506.appspot.com/flamelink/media/trondheim-rose.png?GoogleAccessId=firebase-adminsdk-milcl%40byportal-218506.iam.gserviceaccount.com&Expires=16725222000&Signature=ispev177NZs6miRfdwdkIvU%2FXjny72%2FAiH6%2FNphbhJjL3852TJqV7Hg2CrF2of%2FaGKhbA6Oqkw9GoF2Dceu0wf2DeEoPLU4Gz%2BE2Q02Cj%2FNI8TiRH6B7VB29m7HEfNX%2BPvZar7sU2G%2BQManZWFa0nW1yeJPIJ1WSkbTplFphEEkvUTJ4JTvH3T9pSFeKB7t%2BY1%2Fj3w8hCEBvKxkja9kAAZQVS%2BaGFbOKqZQ%2BKOq3YPuiFp1NhBbB0hoF0qqK3HWj2oWW6j8SfDoLGA%2BNroLA11npf%2FUcLflmW6p4HQ4VC6dyMMuvzS0L8SU7Pk%2FDUgeOVD%2Bzr4VY0PKJIC6jLfmc1Q%3D%3D",
+          "flamelink_id": "0C0EAhR0eCGMq2rXGz8M",
+          "localFile___NODE": "c41a0c68-ee44-5e05-b3ca-e703057ba1a5"
+        }
+      ],
+      "parentId": "0",
+      "navbarText": "TRONDHEIM.NO",
+      "flamelink_id": "v9NPfevbknDrwgh15MJF",
+      "extraMenuOptions___NODE": [
+        "533988bf-64e1-515c-9856-52a7ebf3dd03"
+      ],
+      "flamelink_locale": "no",
+      "id": "03c5022b-27dc-568f-acf3-311b6c1db0b2",
+      "parent": null,
+      "children": [
+        "533988bf-64e1-515c-9856-52a7ebf3dd03",
+        "861eb797-9b09-5319-8e03-0b4c89a4642e"
+      ],
+      "internal": {
+        "type": "FlamelinkNavbarContent",
+        "content": "{\"_fl_meta_\":{\"schemaType\":\"single\",\"docId\":\"v9NPfevbknDrwgh15MJF\",\"lastModifiedDate\":\"2020-07-29T14:22:40.201Z\",\"lastModifiedBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"schemaRef\":{\"_fl_meta_\":{\"lastModifiedDate\":\"2020-06-29T11:46:20.455Z\",\"lastModifiedBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"env\":\"production\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"createdDate\":\"2020-06-29T09:49:26.748Z\",\"fl_id\":\"navbar\",\"docId\":\"rwUmPQGIukFefDMKm54x\"},\"icon\":\"\",\"group\":\"Navbar\",\"type\":\"single\",\"title\":\"Navbar\",\"description\":\"Text, logo, and extra menu options to be rendered on the page's navigation bar\",\"enabled\":true,\"sortable\":true,\"id\":\"navbar\",\"fields\":[{\"conditions\":[],\"type\":\"text\",\"description\":\"Text shown in the top right of the navigation bar\",\"show\":true,\"readOnly\":false,\"title\":\"Navbar Text\",\"constraints\":[],\"defaultValue\":\"TRONDHEIM.NO\",\"hidden\":false,\"gridColumns\":{\"sm\":12,\"xs\":12,\"lg\":8,\"md\":8},\"key\":\"navbarText\",\"id\":1593423986596},{\"hidden\":false,\"mediaTypes\":[\"images\"],\"gridColumns\":{\"sm\":12,\"xs\":12,\"lg\":4,\"md\":4},\"limit\":1,\"key\":\"logo\",\"id\":1593424019116,\"conditions\":[],\"type\":\"media\",\"readOnly\":false,\"description\":\"Logo image shown in the top right of the navigation bar\",\"show\":false,\"title\":\"Logo\",\"constraints\":[{\"rule\":\"presence\",\"ruleValue\":{\"message\":\"^Field is required\",\"allowEmpty\":false},\"uniqueKey\":\"QDIFFvuCN\"}]},{\"type\":\"repeater\",\"readOnly\":false,\"description\":\"Additional navigation options shown in the drop menu\",\"show\":false,\"title\":\"Extra Menu Options\",\"constraints\":[],\"layout\":\"table\",\"hidden\":false,\"gridColumns\":{\"lg\":12,\"md\":12,\"sm\":12,\"xs\":12},\"options\":[{\"hidden\":false,\"gridColumns\":{\"lg\":12,\"md\":12,\"sm\":12,\"xs\":12},\"key\":\"title\",\"id\":1593431128862,\"conditions\":[],\"type\":\"text\",\"description\":\"\",\"show\":false,\"readOnly\":false,\"title\":\"Title\",\"constraints\":[{\"uniqueKey\":\"JIiPHFG3J\",\"rule\":\"presence\",\"ruleValue\":{\"allowEmpty\":false,\"message\":\"^Field is required\"}}],\"defaultValue\":\"\"},{\"defaultValue\":\"\",\"hidden\":false,\"gridColumns\":{\"xs\":12,\"lg\":12,\"md\":12,\"sm\":12},\"key\":\"redirectUrl\",\"id\":1593431142645,\"conditions\":[],\"type\":\"text\",\"description\":\"Which URL should this option redirect to?\",\"show\":false,\"readOnly\":false,\"title\":\"Redirect URL\",\"constraints\":[{\"ruleValue\":{\"allowEmpty\":false},\"uniqueKey\":\"xKvLdDyja\",\"rule\":\"presence\"},{\"ruleValue\":{\"allowLocal\":false,\"schemes\":[\"http\",\"https\"],\"message\":\"^Field is not a valid url\"},\"uniqueKey\":\"LnqVEv3jT\",\"rule\":\"url\"}]}],\"key\":\"extraMenuOptions\",\"id\":1593431096160,\"conditions\":[]}]},\"env\":\"production\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"createdDate\":\"2020-06-30T10:45:24.184Z\",\"schema\":\"navbar\",\"fl_id\":\"v9NPfevbknDrwgh15MJF\",\"locale\":\"no\"},\"order\":0,\"logo\":[{\"folderId\":{\"order\":4,\"name\":\"Frontpage Images\",\"id\":\"GHRkSTuMUzB9zUAaMeBZ\",\"parentId\":{\"parentId\":0,\"_fl_meta_\":{\"docId\":\"root\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"createdDate\":\"2020-06-29T13:36:54.676Z\",\"lastModifiedBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"lastModifiedDate\":\"2020-06-29T13:37:01.004Z\"},\"order\":0,\"name\":\"Root\",\"id\":\"root\"},\"_fl_meta_\":{\"docId\":\"GHRkSTuMUzB9zUAaMeBZ\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"createdDate\":\"2020-06-29T12:57:50.407Z\",\"lastModifiedBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\",\"lastModifiedDate\":\"2020-06-29T12:57:56.804Z\"}},\"contentType\":\"image/png\",\"_fl_meta_\":{\"createdDate\":\"2020-06-29T13:01:14.563Z\",\"docId\":\"0C0EAhR0eCGMq2rXGz8M\",\"createdBy\":\"jnZrivWWxXgTt4xQQIFWfTHb2BB2\"},\"type\":\"images\",\"sizes\":[{\"path\":\"375_9999_100\",\"quality\":\"1\",\"height\":\"9999\",\"width\":\"375\"},{\"height\":\"9999\",\"width\":\"667\",\"path\":\"667_9999_100\",\"quality\":\"1\"},{\"path\":\"900_9999_100\",\"quality\":\"1\",\"height\":\"9999\",\"width\":\"900\"},{\"path\":\"1080_9999_100\",\"quality\":\"1\",\"height\":\"9999\",\"width\":\"1080\"},{\"height\":\"9999\",\"width\":\"1440\",\"path\":\"1440_9999_100\",\"quality\":\"1\"},{\"path\":\"1920_9999_100\",\"quality\":\"1\",\"height\":\"9999\",\"width\":\"1920\"}],\"file\":\"trondheim-rose.png\",\"url\":\"https://storage.googleapis.com/byportal-218506.appspot.com/flamelink/media/trondheim-rose.png?GoogleAccessId=firebase-adminsdk-milcl%40byportal-218506.iam.gserviceaccount.com&Expires=16725222000&Signature=ispev177NZs6miRfdwdkIvU%2FXjny72%2FAiH6%2FNphbhJjL3852TJqV7Hg2CrF2of%2FaGKhbA6Oqkw9GoF2Dceu0wf2DeEoPLU4Gz%2BE2Q02Cj%2FNI8TiRH6B7VB29m7HEfNX%2BPvZar7sU2G%2BQManZWFa0nW1yeJPIJ1WSkbTplFphEEkvUTJ4JTvH3T9pSFeKB7t%2BY1%2Fj3w8hCEBvKxkja9kAAZQVS%2BaGFbOKqZQ%2BKOq3YPuiFp1NhBbB0hoF0qqK3HWj2oWW6j8SfDoLGA%2BNroLA11npf%2FUcLflmW6p4HQ4VC6dyMMuvzS0L8SU7Pk%2FDUgeOVD%2Bzr4VY0PKJIC6jLfmc1Q%3D%3D\",\"flamelink_id\":\"0C0EAhR0eCGMq2rXGz8M\"}],\"parentId\":\"0\",\"navbarText\":\"TRONDHEIM.NO\",\"flamelink_id\":\"v9NPfevbknDrwgh15MJF\",\"extraMenuOptions___NODE\":[\"533988bf-64e1-515c-9856-52a7ebf3dd03\"]}",
+        "contentDigest": "19a9d0bef1ccb8992fcac0c3e4ef36b9",
+        "counter": 5275,
+        "owner": "gatsby-source-flamelink"
+      }
+    }
+  ]
+}

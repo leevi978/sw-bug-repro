@@ -9,7 +9,7 @@ export const onServiceWorkerUpdateReady = () => {
 }
 
 export const onClientEntry = () => {
-  self.onappinstalled = () => {
-    self.navigator.serviceWorker.controller.postMessage('onappinstalled')
+  window.onappinstalled = () => {
+    window.navigator.serviceWorker.controller.postMessage('onappinstalled')
   }
 }

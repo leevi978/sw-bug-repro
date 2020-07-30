@@ -8,9 +8,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   var links = []
 
-  for (var level = 0; level < 20; level++) {
+  for (var level = 0; level < 10; level++) {
     const index = Math.floor(Math.random() * 9)
-    for (var pageNumber = 0; pageNumber < 5; pageNumber++) {
+    for (var pageNumber = 0; pageNumber < 2; pageNumber++) {
       const pageName = `page-${pageNumber}`
       var pagePath = `/${pageName}`
       for (var i = level; i >= 0; i--) {
@@ -82,3 +82,7 @@ exports.onPostBuild = async (args, _ref3) => {
   console.log(`Discarded files: \n${discardedFiles.map(file => `\n${JSON.stringify(file)}`)}`)
 
 }
+
+
+const { sourceNodes } = require('./src/gatsby-helpers/source-nodes.js')
+exports.sourceNodes = sourceNodes
